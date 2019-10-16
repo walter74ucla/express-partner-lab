@@ -21,6 +21,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get('/sports', (req, res) => {
   	res.render('index.ejs', {
     	iRSports: sports //indexRouteSports	
+
+    });
+});
+
+// display show route
+app.get('/sports/:index', (req, res) => {
+  	res.render('show.ejs', {
+    	sRSports: sports[req.params.index], //showRouteSports
+    	index: req.params.index
     });
 });
 
