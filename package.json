@@ -1,0 +1,26 @@
+{
+  "name": "express-partner-lab",
+  "version": "1.0.0",
+  "description": "https://git.generalassemb.ly/WebDev-Connected-Classroom/express-partner-lab",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walter74ucla/express-partner-lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walter74ucla/express-partner-lab/issues"
+  },
+  "homepage": "https://github.com/walter74ucla/express-partner-lab#readme"
+}
