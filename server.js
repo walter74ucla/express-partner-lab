@@ -22,6 +22,15 @@ app.get('/sports', (req, res) => {
     });
 });
 
+// display the populated form
+app.get('/sports/:index/edit', (req, res) => {
+
+  res.render('edit.ejs', {
+    eRSports: sports[req.params.index], // editRouteSports
+    index: req.params.index
+  })
+
+});
 
 // delete
 app.delete('/sports/:index', (req, res) => {
