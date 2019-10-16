@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override')
+const bodyParser = require('body-parser');
 
 const sports = require('./models/sports.js');
 
@@ -8,6 +9,7 @@ const PORT = 3000;
 
 // middleware
 app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // display sports as json route
 // app.get('/sports', (req, res) => {
@@ -31,6 +33,16 @@ app.get('/sports/:index/edit', (req, res) => {
   })
 
 });
+
+// put the contents of the updated form on the index page
+app.put('/sports/:index', (req, res) => {
+  console.log(req.body, 'contents of the form')
+
+  sports[req.params.index] = req.body;
+
+
+  res.redirect('/sports')
+})
 
 // delete
 app.delete('/sports/:index', (req, res) => {
