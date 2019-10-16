@@ -9,8 +9,12 @@
 	        <ul class="sports">
 	        <% for(let i = 0; i < iRSports.length; i++){ %>        
 	            <li><%=iRSports[i].name; %></li>
-	             
-	        <% } %> 	
+	          
+	          <form action="/sports/<%=i%>?_method=DELETE" method="POST">
+                    <button type='Submit'>Delete</button>
+              </form>
+
+	        <% } %> 
 	        </ul>
 
 
