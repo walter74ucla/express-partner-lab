@@ -18,7 +18,7 @@ app.use(methodOverride('_method'));
 // display index route
 app.get('/sports', (req, res) => {
   	res.render('index.ejs', {
-    	iRSports: sports //indexRouteSports
+    	iRSports: sports //indexRouteSports	
     });
 });
 
