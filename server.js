@@ -1,16 +1,24 @@
 const express = require('express');
 const app = express();
-const Sports = require('./models/sports.js');
+const sports = require('./models/sports.js');
 
 
 
 const PORT = 3000;
 
 
+// display sports as json route
+// app.get('/sports', (req, res) => {
+//   res.send(sports);
+// });
 
 
-
-
+// display index route
+app.get('/sports', (req, res) => {
+  	res.render('index.ejs', {
+    	iRSports: sports //indexRouteSports
+    });
+});
 
 
 
